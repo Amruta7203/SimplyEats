@@ -1,7 +1,7 @@
 import { ADD_TO_CART, CLEAR_CART, FETCH_CART, REMOVE_ITEM_CART, UPDATE_CART_ITEM } from "../constants/cartConstant";
 
 export const cartReducer = (state={cartItems:[], restaurant: []}, action) => {
-    switch (action.key) {
+    switch (action.type) {
         case ADD_TO_CART:
             return {
                 ...state,

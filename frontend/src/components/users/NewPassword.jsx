@@ -24,7 +24,7 @@ const NewPassword = () => {
       alert.success("Password reset successfully");
       navigate("/users/login");
     }
-  }, [dispatch, alert, error, success]);
+  }, [dispatch, alert, error, success, navigate]);
 
   const submitHandler = (e) => {
     e.preventDefault();

@@ -10,8 +10,8 @@ import {
 } from "../../actions/cartAction";
 
 export default function FoodItem({ fooditem, restaurant }) {
-  const { quantity, setQuantity } = useState(1);
-  const { showButtons, setShowButtons } = useState(false);
+  const [ quantity, setQuantity ] = useState(1);
+  const [ showButtons, setShowButtons ] = useState(false);
 
   const { isAuthenticated, user } = useSelector((state) => state.auth);
 
