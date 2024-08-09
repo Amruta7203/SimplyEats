@@ -1,6 +1,7 @@
 import axios from "axios";
 import { LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT_FAIL, LOGOUT_SUCCESS, REGISTER_USER_FAIL, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS, UPDATE_PASSWORD_REQUEST, UPDATE_PASSWORD_SUCCESS, UPDATE_PASSWORD_FAIL, FORGOT_PASSWORD_REQUEST, FORGOT_PASSWORD_SUCCESS, FORGOT_PASSWORD_FAIL, NEW_PASSWORD_REQUEST, NEW_PASSWORD_SUCCESS, NEW_PASSWORD_FAIL, UPDATE_PROFILE_REQUEST, UPDATE_PROFILE_SUCCESS, UPDATE_PROFILE_FAIL } from "../constants/userConstant"
 import { CLEAR_ERROR } from "../constants/restaurantConstant";
+import { CLEAR_CART } from "../constants/cartConstant";
 
 export const login = (email, password) => async(dispatch) => {
     try{
@@ -94,6 +95,7 @@ export const logout = () => async(dispatch) => {
         dispatch({
             type: LOGOUT_SUCCESS,
         });
+        dispatch({type: CLEAR_CART}); //clear cart when logout
     } catch(error) {
         dispatch({
             type: LOGOUT_FAIL,
