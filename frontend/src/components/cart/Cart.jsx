@@ -73,6 +73,10 @@ const Cart = () => {
     }
   };
 
+  const checkoutHandler = () => {
+    dispatch(payment(cartItems, restaurant));
+  };
+
   return (
     <>
       {cartItems.length === 0 ? (
@@ -178,7 +182,7 @@ const Cart = () => {
                   </span>
                 </p>
                 <hr />
-                <button id="checkout_btn" className="btn btn-primary btn-block">
+                <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkoutHandler}>
                   Check Out
                 </button>
               </div>
