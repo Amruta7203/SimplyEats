@@ -7,6 +7,7 @@ import {
   removeItemFromCart,
   updateCartQuantity,
 } from "../../actions/cartAction";
+import { payment } from "../../actions/orderAction";
 
 // let fakeCartItems = [
 //   {
@@ -46,6 +47,7 @@ import {
 const Cart = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
+
   const { cartItems, restaurant } = useSelector((state) => state.cart);
 
   useEffect(() => {
