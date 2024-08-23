@@ -15,8 +15,8 @@ export default function Restaurant({restaurant}) {
                 <div className="ratings mt-auto">
                   <div className="rating-outer">
                     <div className="rating-inner" style={{width: `${(restaurant.ratings / 5) * 100}%`}}></div>
-                    <span id="no_of_reviews">({restaurant.numOfReviews} reviews)</span>
                   </div>
+                  <span id="no_of_reviews">({restaurant.numOfReviews} reviews)</span>
                 </div>
             </div>
         </div>
